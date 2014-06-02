@@ -1,0 +1,137 @@
+html {
+    height:100%;
+}
+
+body {
+    background-color:#9D1A24;
+    margin: 0px;
+    padding: 0px;
+    }
+        
+#logo {
+    font-family: sans-serif;
+    font-size: 60pt;
+    font-weight: 100;
+    letter-spacing: 10pt;
+    color:#FFF;
+    position:absolute;
+    margin-top:530px;
+    margin-left:190px;
+}
+
+#canvas-wrap { 
+    margin: 0 auto;
+    width: 600px;
+    padding: 0 px;
+    margin:0 px;
+    position: relative;
+    }
+
+#form_cadastro { 
+  z-index:99;
+  display:none;
+}
+
+#form_login{
+    z-index:100;
+    display:none;
+}
+
+    form.login fieldset {
+        margin-bottom:10px;
+    }
+
+    form.login label {
+        margin-right:2px;
+        color:#9D1A24;
+        display: inline-block;
+        line-height: 1.8;
+        vertical-align: top;
+    }
+
+    form.login input.botao {
+        font-size:15px;
+        color:#9D1A24;
+        background-color:#DDD;
+        text-decoration:none;
+        border-style:none;
+
+        margin-top:20px;
+        width:90px;
+
+        border-radius:9px;
+    }
+
+    form.login input.botao#entrar, #voltar {
+        float:left;
+    }
+
+    form.login input.botao {
+        float:right;
+    }
+
+    form.login fieldset ol {
+        display: margin: 0;
+        padding: 0;
+}
+
+    form.login fieldset li {
+        padding:10px;
+        font-family:sans-serif;
+        list-style:none;
+        text-decoration: none;
+}
+
+    form.login fieldset input {
+        height:30px;
+        width:200px;
+
+        border-style:solid;
+        border-bottom-color:#9D1A24;
+        border-left-color:#9D1A24;
+        border-right-color:#9D1A24;
+        border-top-style:none;
+}
+
+#formulario, #formulario_2 {
+    border-style: none;
+    z-index: 10;
+    height:auto;
+    position:relative;
+    float:right;
+    margin-right:150px;
+    top:230px;
+    text-align: center;
+
+}
+
+#formulario_2{
+  margin-top: -54px;
+}
+
+#circle {
+    position:absolute;
+    z-index: 0;   
+}
+
+#hoverme{
+    border-radius:15px;
+    
+    border-style:none;
+    position:absolute;
+    z-index: 30;  
+    background-color:#FFF;
+    margin-top: 285px;
+    margin-left: 285px;
+    height:30px;
+    width:30px;
+}
+
+form.box {
+ display:block; 
+}
+
+form.sumiu {
+  opacity: 0;
+  display:none;
+}

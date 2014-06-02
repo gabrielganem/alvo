@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="estilo_1.css">
+    <title>Alvo</title>
+  </head>
+  <body>
+      <div id="canvas-wrap">
+          
+        <canvas id="circle" width="600" height="600"></canvas>
+        <script>
+              var canvas = document.getElementById('circle');
+              var context = canvas.getContext('2d');
+              var centerX = canvas.width / 2;
+              var centerY = canvas.height / 2;
+              var radius = 200;
+              context.beginPath();
+              context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+              context.fillStyle = '#FFF';
+              context.fill();
+
+              context.lineWidth = 20;
+              context.strokeStyle = '#A73339';
+              context.stroke();
+            </script>
+        <script>
+                var centerX = canvas.width/2;
+                var centerY = canvas.height/2;
+                context.textAlign="center";
+                context.textBaseline="middle";
+                context.font = '40pt Arial';
+                context.fillStyle = 'blue';
+                //context.fillText("Hello World0",centerX,centerY);
+
+        </script>
+        <form class="login">
+            <fieldset id="formulario">
+                <ol>
+                    <li>
+                        <label for="nome">nome<em></em></label>
+                        <input id="nome" type="name" value=""/>
+                    </li>
+                    <li>
+                        <label for="email">e-mail</label>
+                        <input id="email" type="email" value=""/>
+                    </li>
+                    <li>
+                        <label for="senha">senha</label>
+                        <input id="senha" type="password" value="" />
+                    </li>
+                     <li>
+                        <input type="submit" class="botao" id="cancelar" value="cancelar" />
+                        <input type="submit" class="botao" id="cadastrar" value="cadastrar" />
+                    </li>
+                </ol>
+                </fieldset>     
+            </form>
+        </div>
+  </body>
+</html>
