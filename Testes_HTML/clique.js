@@ -3,6 +3,7 @@ var centerX = 300;
 var centerY = 300;
 var context;
 var raio = 15;
+var bunda = 3;
 
 function background(raio) {
     var radius = raio;
