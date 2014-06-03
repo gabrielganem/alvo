@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo $this->titulo; ?></title>
+    </head>
+    <body>
+        <h1><?php echo $this->titulo1; ?></h1>
+        <form action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'adicionarusuarioprojeto')); ?>" method="post">
+            <input type="hidden" name="id_projeto" value="<?php echo $this->idproj; ?>"/>
+            <input type="hidden" name="nome_projeto" value="<?php echo $this->nmproj; ?>"/>
+            <input type="text" name ="nome_usuario" placeholder="Login do usuario a ser adicionado">
+            <input type="submit" value="Adicionar usuario">
+        </form>
+        <form action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'visualizarprojeto')); ?>" method="post">
+            <input type="hidden" name="id_projeto" value="<?php echo $this->idproj; ?>"/>
+            <input type="hidden" name="nome_projeto" value="<?php echo $this->nmproj; ?>"/>
+
+            <input type="submit" value="Voltar a visualização do projeto">
+        </form>
+        <a class="btn btn-inverse" href="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'index')); ?>">Voltar</a>
+
+        <h6><?php echo $this->warning; ?></h6>
+    </body>
+</html>

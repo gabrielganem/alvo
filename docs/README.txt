@@ -14,13 +14,13 @@ Setting Up Your VHOST
 The following is a sample VHOST you might want to consider for your project.
 
 <VirtualHost *:80>
-   DocumentRoot "/Users/jgabriel/Sites/alvo/public"
-   ServerName alvo.local
+   DocumentRoot "C:/xampp/htdocs/alvo2/public"
+   ServerName .local
 
    # This should be omitted in the production environment
    SetEnv APPLICATION_ENV development
 
-   <Directory "/Users/jgabriel/Sites/alvo/public">
+   <Directory "C:/xampp/htdocs/alvo2/public">
        Options Indexes MultiViews FollowSymLinks
        AllowOverride All
        Order allow,deny

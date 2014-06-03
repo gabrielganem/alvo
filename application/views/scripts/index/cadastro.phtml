@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+    </head>
+    <body>
+        <form method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>">
+
+            <input type="text" name="nome_usuario" value="" placeholder="Nome de Usuario"/>
+            <input name="senha1" type="password" value="" placeholder="Senha"/>
+            <input name="senha2" type="password" value="" placeholder="Confirmar Senha"/>
+            <input type="submit" value="Cadastrar" />
+
+        </form>
+        <p><?php echo $this->aviso;?></p>
+    </body>
+</html>

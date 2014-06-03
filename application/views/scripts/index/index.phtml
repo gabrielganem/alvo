@@ -1,44 +1,43 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <script type="text/javascript" src="js/login.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
-    <title>Alvo</title>
-  </head>
-  <body>
-      
-      <div id="canvas-wrap">
-          
-        <canvas id="circle" width="600" height="600"></canvas>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
+        <title>Alvo</title>
+    </head>
+    <body>
 
- 
-        <input type="button" onclick="init()" value="" id="hoverme" />
-          
-        <form class="login" id="form_login">
-            <fieldset id="formulario">
-                <ol>
-                    <!--<li>
-                        <label for="nome">nome<em></em></label>
-                        <input id="nome" type="name" value=""/>
-                    </li>-->
-                    <li>
-                        <label for="login">login&nbsp;&nbsp;</label>
-                        <input id="login" type="name" value=""/>
-                    </li>
-                    <li>
-                        <label for="senha">senha</label>
-                        <input id="senha" type="password" value="" />
-                    </li>
-                    <li>
-                        <input type="button" onclick="progresso_login()" class="botao" id="entrar" value="entrar" />
-                        <input type="button" onclick="draw_login()" class="botao" id="cadastrar" value="cadastrar" />
-                    </li>
-                </ol>
+        <div id="canvas-wrap">
+
+            <canvas id="circle" width="600" height="600"></canvas>
+
+
+            <input type="button" onclick="init()" value="" id="hoverme" />
+
+            <form class="login" id="form_login" method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>">
+                <fieldset id="formulario">
+                    <ol>
+                        <!--<li>
+                            <label for="nome">nome<em></em></label>
+                            <input id="nome" type="name" value=""/>
+                        </li>-->
+                        <li>
+                            <label for="login">login&nbsp;&nbsp;</label>
+                            <input id="login" type="text" name="nome_usuario" value=""/>
+                        </li>
+                        <li>
+                            <label for="senha">senha</label>
+                            <input id="senha" name="senha" type="password" value="" />
+                        </li>
+                        <li>
+                            <input type="submit" onclick="progresso_login()" class="botao" id="entrar" value="entrar" />
+                            <input type="button" onclick="draw_login()" class="botao" id="cadastrar" value="cadastrar" />
+                        </li>
+                    </ol>
                 </fieldset>     
             </form>
-          <div id="logo">ALVO</div>
+            <div id="logo">ALVO</div>
+            <div><?php echo $this->resultlogin;?></div>
         </div>
-      
-  </body>
+    </body>
 </html>

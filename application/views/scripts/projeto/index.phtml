@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-9"><h1>Projetos</h1></div>
+    <div class="col-md-3"><h1 class=""> <a class="btn btn-primary btn-lg" style="float:right;" role="button" href="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'criarprojeto')); ?>"><span class="fui-plus"></span> Novo Projeto</a></h1></div>
+</div>
+
+<div class="panel-group" id="accordion"><!--acordeon-->
+    <?php
+    if ($this->seldproj != null) {
+        foreach ($this->seldproj as $tupla) {
+            foreach ($tupla as $col) {
+                //gerar tabela
+                ?>
+                <div class="panel"><!--acordeon item-->
+                    <a data-toggle="collapse" data-parent="#accordion" data-target="#<?php echo $col['id_projeto']; ?>" href="#">
+                    <div class="panel-heading"><!--acordeon header-->
+                        <h4 class="panel-title"><!--acordeon titulo-->
+                            
+                                <?php echo $col['nome_projeto']; ?> 
+                            <span class="badge" style="float:right;"><?php echo $col['data_criacao_projeto']; ?></span>
+                        </h4>
+                    </div></a>
+                    <div id="<?php echo $col['id_projeto']; ?>" class="panel-collapse collapse in"><!--acordeon parte colapsavel-->
+                        <div class="panel-body"><!--acordeon corpo-->
+                            <p>Descrição: <?php echo $col['descricao_projeto']; ?></p>
+                             
+                            <form id="<?php echo $col['id_projeto']; ?>" action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'visualizarprojeto')); ?>" method="post">
+                                <input type="hidden" name="id_projeto" value="<?php echo $col['id_projeto']; ?>"/>
+                                <button type="submit" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-eye-open"></span> Visualizar</button>        
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <?php
+            }
+        }
+    }
+    ?>
+
+</div>
+
+
+<script>$('.collapse').collapse({
+  toggle: true
+})</script>

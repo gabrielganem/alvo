@@ -6,8 +6,8 @@ body {
     background-color:#9D1A24;
     margin: 0px;
     padding: 0px;
-    }
-        
+}
+
 #logo {
     font-family: sans-serif;
     font-size: 60pt;
@@ -21,70 +21,70 @@ body {
 #canvas-wrap { 
     margin: 0 auto;
     width: 600px;
-    padding: 0 px;
-    margin:0 px;
+    padding: 0px;
+    margin: 0px;
     position: relative;
-    }
+}
 
 #form_login{
     display:none; 
     z-index:100;
 }
 
-    form.login fieldset {
-        margin-bottom:10px;
-    }
-
-    form.login label {
-        margin-right:2px;
-        color:#9D1A24;
-        display: inline-block;
-        line-height: 1.8;
-        vertical-align: top;
-    }
-
-    form.login input.botao {
-        font-size:15px;
-        color:#9D1A24;
-        background-color:#DDD;
-        text-decoration:none;
-        border-style:none;
-
-        margin-top:20px;
-        width:90px;
-
-        border-radius:9px;
-    }
-
-    form.login input.botao#entrar {
-        float:left;
-    }
-
-    form.login input.botao {
-        float:right;
-    }
-
-    form.login fieldset ol {
-        display: margin: 0;
-        padding: 0;
+form.login fieldset {
+    margin-bottom:10px;
 }
 
-    form.login fieldset li {
-        padding:10px;
-        font-family:sans-serif;
-        list-style:none;
-        text-decoration: none;
+form.login label {
+    margin-right:2px;
+    color:#9D1A24;
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
 }
 
-    form.login fieldset input {
-        height:30px;
-        width:200px;
+form.login input.botao {
+    font-size:15px;
+    color:#9D1A24;
+    background-color:#DDD;
+    text-decoration:none;
+    border-style:none;
 
-        border-style:solid;
-        border-bottom-color:#9D1A24;
-        border-left-color:#9D1A24;
-        border-right-color:#9D1A24;
-        border-top-style:none;
+    margin-top:20px;
+    width:90px;
+
+    border-radius:9px;
+}
+
+form.login input.botao#entrar {
+    float:left;
+}
+
+form.login input.botao {
+    float:right;
+}
+
+form.login fieldset ol {
+    margin: 0;
+    padding: 0;
+}
+
+form.login fieldset li {
+    padding:10px;
+    font-family:sans-serif;
+    list-style:none;
+    text-decoration: none;
+}
+
+form.login fieldset input {
+    height:30px;
+    width:200px;
+
+    border-style:solid;
+    border-bottom-color:#9D1A24;
+    border-left-color:#9D1A24;
+    border-right-color:#9D1A24;
+    border-top-style:none;
 }
 
 #formulario {
@@ -105,7 +105,7 @@ body {
 
 #hoverme{
     border-radius:15px;
-    
+
     border-style:none;
     position:absolute;
     z-index: 30;  

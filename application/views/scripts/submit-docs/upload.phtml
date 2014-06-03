@@ -1,0 +1,16 @@
+<?php if ($this->move == true) { ?>
+
+    <form id="1" action="<?php echo $this->url(array('controller' => 'SubmitDocs', 'action' => 'index')); ?>" method="POST">
+        <input type="hidden" name="fk_id_projeto" value="<?php echo $this->idproj; ?>" />
+        <input type="hidden" name="move" value="1" />
+    </form>
+  <script>$(document).ready(function(){document.getElementById('1').submit();})</script>
+
+<?php } else { ?>
+
+    <form id="2" action="<?php echo $this->url(array('controller' => 'SubmitDocs', 'action' => 'index')); ?>" method="POST">
+        <input type="hidden" name="fk_id_projeto" value="<?php echo $this->idproj; ?>" />
+        <input type="hidden" name="move" value="0" />
+    </form>
+  <script>$(document).ready(function(){document.getElementById('2').submit();})</script>
+<?php } ?>

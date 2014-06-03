@@ -1,0 +1,12 @@
+<h1 class="page-header">Criar Novo Projeto</h1>
+<form action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'criarprojeto')); ?>" method="post">
+    <div class="form-group">
+        <input class="form-control" type="text" name="nome_projeto" placeholder="Nome do projeto"/>
+        <h6><?php echo $this->warning; ?></h6>
+    </div>
+    <div class="form-group">
+        <textarea name="descricao" placeholder="Descricao do projeto" class="form-control" rows="5"></textarea>
+    </div>
+    <a class="btn btn-info" href="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'index')); ?>">Voltar</a>
+    <button style="float:right;" type="submit" class="btn btn-success">Enviar</button>
+</form>
