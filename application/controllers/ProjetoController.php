@@ -10,7 +10,10 @@ class ProjetoController extends Zend_Controller_Action {
      * inicializa as variaveis que vao ser usadas no escopo projetoControler
      */
     public function init() {
-        $this->modelPro = new Application_Model_Projeto();
+    	$this->modelMensagem = new Application_Model_Mensagem();
+    	
+
+    	$this->modelPro = new Application_Model_Projeto();
         $identity = Zend_Auth::getInstance()->getIdentity();
         $this->username = $identity['login'];
         $this->userid = $identity['id_usuario'];
@@ -70,6 +73,8 @@ class ProjetoController extends Zend_Controller_Action {
             $this->view->nmproj = @$array['nome_projeto'];
         }
         $this->view->descricao = $this->modelPro->selectDescricao(@$array['id_projeto']);
+        $this->view->listMessage = $this->modelMensagem->selectMensagemDestinatario( $this->userid);
+        $this->view->userMessage = $this->modelPro->selectUsers(@$array['id_projeto']);
     }
     /**
      * action de adicionar projeto
@@ -93,7 +98,9 @@ class ProjetoController extends Zend_Controller_Action {
         $this->view->warning = "";
         if (array_key_exists('nome_usuario', $array)) {
             $this->view->warning = $this->modelPro->insertuser($array['nome_usuario'], $array['id_projeto']);
+            
         }
+       
     }
 
 }

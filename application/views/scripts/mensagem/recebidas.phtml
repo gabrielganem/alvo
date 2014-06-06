@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><?php echo $this->titulo; ?></title>
+    </head>
+    <body>
+        <h1>Lista de mensagens</h1>
+        <div>
+            <ul><?php
+                if ($this->listMessage2 != null) {
+                    foreach ($this->listMessage2 as $tupla) {?>
+                        
+                           
+                            <li>
+                                <?php echo $tupla['mensagem'];?>
+                            </li><?php
+                           
+                        
+                    }
+                }
+                ?></ul>
+        </div>
+        <a href="<?php echo $this->url(array('controller' => 'Mensagem', 'action' => 'form')); ?>">Nova mensagem</a>
+
+    </body>
+</html>
