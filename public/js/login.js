@@ -13,9 +13,15 @@ function senha_incorreta() {
 }
 
 function sub(){
-  document.forms['form_login'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>";
+  document.forms['form_login'].action = "COLOQUE A ACTION DE LOGIN AQUI";
   document.forms['form_login'].submit();
 }
+
+function cadastrar(){
+  document.forms['form_cadastro'].action = "COLOQUE A ACTION DE CADASTRO AQUI";
+  document.forms['form_cadastro'].submit();
+}
+
 
 function contorno() {
   var radius = 200;
