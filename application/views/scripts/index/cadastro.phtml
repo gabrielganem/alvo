@@ -1,14 +1,22 @@
 <!DOCTYPE HTML>
 <html lang="pt-br">
     <head>
+
+        <script type="text/javascript">
+            function sub(){
+                document.forms['ola'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>";
+                document.forms['ola'].submit();
+        }
+        </script>
     </head>
     <body>
-        <form method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>">
+        <form name="ola" method="post">
 
             <input type="text" name="nome_usuario" value="" placeholder="Nome de Usuario"/>
             <input name="senha1" type="password" value="" placeholder="Senha"/>
             <input name="senha2" type="password" value="" placeholder="Confirmar Senha"/>
-            <input type="submit" value="Cadastrar" />
+            <a class="btn btn-group" onclick="sub()">SUBMIT</a>
+            <!--<input type="submit" value="Cadastrar" />-->
 
         </form>
         <p><?php echo $this->aviso;?></p>

@@ -1,0 +1,183 @@
+#bloco_1 {
+  float:left;
+  position:relative;
+  width:760px;
+  height:600px;
+  background-color:#FFF;
+  margin: 15px;
+}
+
+  #b1_coluna_1 {
+    float:left;
+    position:relative;
+    background-color:#DDD;
+    height:400px;
+    width:240px;
+    overflow: scroll;
+  }
+
+  #b1_coluna_2 {
+    float:left;
+    position:relative;
+    background-color:#DDD;
+    margin-left:20px;
+    height:350px;
+    width:500px;
+    overflow: scroll;
+  }
+
+  #b1_coluna_2_1 {
+    padding-top: 10px;
+    float:left;
+    position:relative;
+    background-color:#DDD;
+    margin-left:20px;
+    height:50px;
+    width:500px;
+    overflow: scroll;
+  }
+
+
+
+#titulo_mensagem {
+  font-weight: 100;
+  font-family: sans-serif;
+}
+  .lista_mensagens {
+    font-family: sans-serif;
+    color:#055;
+    font-size:12pt;
+    font-weight:100;
+    list-style:none;
+    text-decoration: none;
+    padding-left:10px;
+    padding-right:15px;
+  }
+
+    .lista_mensagens li {
+      padding:6px;
+      margin-top:2px;
+      margin-bottom:2px;
+      background-color: #FFF;
+    }
+
+  .lista_msg_pessoal {
+    font-family: sans-serif;
+    color:#055;
+    font-size:12pt;
+    font-weight:100;
+    list-style: none;
+    text-decoration: none;
+    padding-left:10px;
+    padding-right:15px;
+  }
+
+  .lista_msg_pessoal li{
+    margin-bottom:4px;
+    margin-top:4px;
+    padding: 10px;
+    background-color:#FFF;
+  }
+
+  .lista_msg_pessoal li.sent{
+    width: auto;
+    border-right-style:inset;
+    border-right-width: 6px;
+    border-right-color:#333;
+    text-align: right;
+  }
+
+ .lista_msg_pessoal li.received{
+    border-left-style:inset;
+    border-left-width: 6px;
+    border-left-color:#00F;
+  }
+
+ .lista_mensagens li.mensagens_dumb {
+   text-align:center;
+   background-color:#BBB;
+   font-size:10pt;
+    }
+
+  .lista_mensagens li.enviado, li.entrada {
+    /*display:none;*/ 
+  }
+  
+  .lista_mensagens li.ativo {
+    font-weight:400; 
+    border-right-style: inset;
+    border-width: 6px;
+    border-color: #009;
+  }
+
+#bloco_2 {
+  float:left;
+  position:relative;
+  width:760px;
+  background-color:#DDD;
+  height:510px;
+  margin: 15px;
+  
+  overflow: scroll;
+}
+
+  #div_feed {
+    background-color: #FFF;
+    margin-left:20px;
+    margin-right:20px;
+      
+    border-bottom-style: inset;
+    border-bottom-color: #777;
+
+  }
+
+  ul.feed {
+    list-style: none;
+    text-decoration: none;
+    padding:0;
+    margin:0;
+  }
+  
+    ul.feed li {
+      font-family: sans-serif;
+      font-weight: 100;
+    }
+    
+      #div_feed h1 {
+        color:#9D1A24;
+        font-weight:600;
+        font-size: 14pt;
+        margin-bottom:6px;
+      }
+
+      #div_feed h2 {
+        margin:0;
+       font-weight: 100;
+       font-size: 11pt;
+       color: #555;
+      }
+
+      #div_feed p {
+        font-size: 12pt;
+        padding: 10px;
+      }
+      
+      #div_feed_assunto {
+        padding:1px;
+        margin:10px;
+      }
+
+      #div_feed_img {
+        margin:10px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        float:left;
+      }
+
+#mensagem_texto {
+  width: 410px;
+  margin-left: 10px;
+  height: 30px;
+  text-align: left;
+}

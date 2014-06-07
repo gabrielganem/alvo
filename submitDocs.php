@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Loading Bootstrap -->
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="bootstrap/css/prettify.css" rel="stylesheet">
+    <link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="public/bootstrap/css/prettify.css" rel="stylesheet">
 
     <!-- Loading Flat UI -->
     <link href="css/flat-ui.css" rel="stylesheet">
@@ -52,19 +52,19 @@
 	
 	
 </div>
-	<script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="js/jquery.ui.touch-punch.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-select.js"></script>
-    <script src="js/bootstrap-switch.js"></script>
-    <script src="js/flatui-checkbox.js"></script>
-    <script src="js/flatui-radio.js"></script>
-    <script src="js/jquery.tagsinput.js"></script>
-    <script src="js/jquery.placeholder.js"></script>
-    <script src="js/typeahead.js"></script>
+	<script scr="public/js/jquery-1.8.3.min.js"></script>
+    <script scr="public/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script scr="public/js/jquery.ui.touch-punch.min.js"></script>
+    <script scr="public/js/bootstrap.min.js"></script>
+    <script scr="public/js/bootstrap-select.js"></script>
+    <script scr="public/js/bootstrap-switch.js"></script>
+    <script scr="public/js/flatui-checkbox.js"></script>
+    <script scr="public/js/flatui-radio.js"></script>
+    <script scr="public/js/jquery.tagsinput.js"></script>
+    <script scr="public/js/jquery.placeholder.js"></script>
+    <script scr="public/js/typeahead.js"></script>
     <script src="bootstrap/js/google-code-prettify/prettify.js"></script>
-    <script src="js/application.js"></script>
+    <script scr="public/js/application.js"></script>
 
 </body>
 </html>
