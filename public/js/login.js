@@ -13,7 +13,7 @@ function senha_incorreta() {
 }
 
 function sub(){
-  document.forms['form_login'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>";
+  document.forms['form_login'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>";
   document.forms['form_login'].submit();
 }
 
