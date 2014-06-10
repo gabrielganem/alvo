@@ -49,7 +49,7 @@ function progresso(angulo_p) {
   context.strokeStyle = '#FFF';
   context.stroke();
   
-
+  return sub();
 }
 
 function draw_progress() {
@@ -57,7 +57,6 @@ function draw_progress() {
   if (angulo_p < 360) {
     angulo_p = angulo_p + 3;
   }
-    return sub();
 }
 
 function progresso_login() {
