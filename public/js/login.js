@@ -12,10 +12,6 @@ function senha_incorreta() {
   alert("Senha inválida. Tente novamente");
 }
 
-function sub(){
-  document.forms['form_login'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>";
-  document.forms['form_login'].submit();
-}
 
 function contorno() {
   var radius = 200;
