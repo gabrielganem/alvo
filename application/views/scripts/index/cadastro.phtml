@@ -1,24 +1,63 @@
-<!DOCTYPE HTML>
-<html lang="pt-br">
-    <head>
+<body>
 
-        <script type="text/javascript">
-            function sub(){
-                document.forms['ola'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>";
-                document.forms['ola'].submit();
-        }
+    <div id="canvas-wrap">
+
+        <canvas id="circle" width="600" height="600"></canvas>
+        <script>
+            var canvas = document.getElementById('circle');
+            var context = canvas.getContext('2d');
+            var centerX = canvas.width / 2;
+            var centerY = canvas.height / 2;
+            var radius = 200;
+            context.beginPath();
+            context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = '#FFF';
+            context.fill();
+
+            context.lineWidth = 20;
+            context.strokeStyle = '#A73339';
+            context.stroke();
         </script>
-    </head>
-    <body>
-        <form name="ola" method="post">
+        <script>
+            var centerX = canvas.width / 2;
+            var centerY = canvas.height / 2;
+            context.textAlign = "center";
+            context.textBaseline = "middle";
+            context.font = '40pt Arial';
+            context.fillStyle = 'blue';
+            //context.fillText("Hello World0",centerX,centerY);
 
-            <input type="text" name="nome_usuario" value="" placeholder="Nome de Usuario"/>
-            <input name="senha1" type="password" value="" placeholder="Senha"/>
-            <input name="senha2" type="password" value="" placeholder="Confirmar Senha"/>
-            <a class="btn btn-group" onclick="sub()">SUBMIT</a>
-            <!--<input type="submit" value="Cadastrar" />-->
+        </script>       
 
+        <form class="login" id="form_cadastro" method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>">
+            <fieldset id="formulario_2">
+                <ol>
+                    <li>
+                        <label for="nome">e-mail</label>
+                        <input name="email_c" type="email" value="" placeholder="e-mail"/>
+                    </li>
+                    <li>
+                        <label for="login">login&nbsp;&nbsp;</label>
+                        <input name="login_c" type="text" value="" placeholder="Nome de usuario"/>
+                    </li>
+                    <li>
+                        <label for="senha">senha</label>
+                        <input name="senha_c" type="password" value="" placeholder="senha"/>
+                    </li>
+                    <li>
+                        <label for="senha">senha</label>
+                        <input name="senha2_c" type="password" value="" placeholder="Confirmar senha"/>
+                    </li>
+                    <li>
+                        <a href="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>" >                            
+                            <input type="button" class="botao" id="cadastrar" value="Voltar" />
+                        </a>
+                        <input type="submit" class="botao" id="continuar" value="Confirmar" />
+                    </li>
+                </ol>
+            </fieldset>     
         </form>
-        <p><?php echo $this->aviso;?></p>
-    </body>
-</html>
+        <div id="logo">ALVO</div>
+    </div>
+
+</body>

@@ -8,8 +8,13 @@ class SubmitDocsController extends Zend_Controller_Action {
     public function init() {
         $this->modelSub = new Application_Model_Submit();
         $identity = Zend_Auth::getInstance()->getIdentity();
-        $this->username = $identity['login'];
-        $this->userid = $identity['id_usuario'];
+        if ($identity != null) {
+            $this->username = $identity['login'];
+            $this->userid = $identity['id_usuario'];
+        } else {
+            
+            $this->_helper->redirector('Index','index');             
+        }
     }
 
     public function indexAction() {

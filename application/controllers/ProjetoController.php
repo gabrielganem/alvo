@@ -1,4 +1,5 @@
 <?php
+
 //anusio
 class ProjetoController extends Zend_Controller_Action {
 
@@ -10,13 +11,18 @@ class ProjetoController extends Zend_Controller_Action {
      * inicializa as variaveis que vao ser usadas no escopo projetoControler
      */
     public function init() {
-    	$this->modelMensagem = new Application_Model_Mensagem();
-    	
+        $this->modelMensagem = new Application_Model_Mensagem();
 
-    	$this->modelPro = new Application_Model_Projeto();
+
+        $this->modelPro = new Application_Model_Projeto();
         $identity = Zend_Auth::getInstance()->getIdentity();
-        $this->username = $identity['login'];
-        $this->userid = $identity['id_usuario'];
+                
+        if ($identity != null) {
+            $this->username = $identity['login'];
+            $this->userid = $identity['id_usuario'];
+        } else {
+            $this->_helper->redirector('Index','index');        
+        }
     }
 
     /**
@@ -47,6 +53,7 @@ class ProjetoController extends Zend_Controller_Action {
             $this->modelPro->insert($this->userid, $array);
         }
     }
+
     /**
      * action de visualizar projeto
      */
@@ -73,9 +80,10 @@ class ProjetoController extends Zend_Controller_Action {
             $this->view->nmproj = @$array['nome_projeto'];
         }
         $this->view->descricao = $this->modelPro->selectDescricao(@$array['id_projeto']);
-        $this->view->listMessage = $this->modelMensagem->selectMensagemDestinatario( $this->userid);
+        $this->view->listMessage = $this->modelMensagem->selectMensagemDestinatario($this->userid);
         $this->view->userMessage = $this->modelPro->selectUsers(@$array['id_projeto']);
     }
+
     /**
      * action de adicionar projeto
      */
@@ -98,9 +106,7 @@ class ProjetoController extends Zend_Controller_Action {
         $this->view->warning = "";
         if (array_key_exists('nome_usuario', $array)) {
             $this->view->warning = $this->modelPro->insertuser($array['nome_usuario'], $array['id_projeto']);
-            
         }
-       
     }
 
 }

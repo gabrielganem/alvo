@@ -47,13 +47,13 @@ class Application_Model_Usuario {
      * @param type $senha
      * @return string
      */
-    public function insert($nome, $senha) {
+    public function insert($nome, $senha, $email) {
         if ($nome == "") {
             return "digite o nome do usuario a ser inserido.";
         }
         $dbTableUse = new Application_Model_DbTable_Usuario();
         //lembrar de setar unic no banco
-        $query = $dbTableUse->insert(array('login' => $nome, 'senha' => md5($senha)));
+        $query = $dbTableUse->insert(array('login' => $nome, 'senha' => md5($senha),'email' => $email));
 
         if ($query == null) {
             return "login existente";
@@ -66,7 +66,6 @@ class Application_Model_Usuario {
     public function logoutAction() {
         $auth = Zend_Auth::getInstance();
         $auth->clearIdentity();
-        $this->_redirect('/user');
     }
 
     

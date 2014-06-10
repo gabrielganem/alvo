@@ -1,13 +1,13 @@
-  <body>
-      
-      <div id="canvas-wrap">
-          
+<body>
+
+    <div id="canvas-wrap">
+
         <canvas id="circle" width="600" height="600"></canvas>
-        <script type="text/javascript" src="login.js"></script>
- 
+
+
         <input type="button" onclick="init()" value="" id="hoverme" />
-          
-        <form name="form_login" method="post" class="login" id="form_login">
+
+        <form class="login" id="form_login" method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>">
             <fieldset id="formulario">
                 <ol>
                     <!--<li>
@@ -16,45 +16,22 @@
                     </li>-->
                     <li>
                         <label for="login">login&nbsp;&nbsp;</label>
-                        <input id="login" name="login" type="name"/>
+                        <input id="login" type="text" name="nome_usuario" value=""/>
                     </li>
                     <li>
                         <label for="senha">senha</label>
-                        <input id="senha" name="senha" type="password"/>
+                        <input id="senha" name="senha" type="password" value="" />
                     </li>
                     <li>
-                        <input type="button" onclick="progresso_login()" class="botao" id="entrar" value="entrar" />
-                        <input type="button" onclick="draw_cadastro1()" class="botao" id="cadastrar" value="cadastrar" />
+                        <input type="submit" onclick="progresso_login()" class="botao" id="entrar" value="entrar" />
+                        <a href="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>" >                            
+                            <input type="button" onclick="window.location = '<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>'" class="botao" id="cadastrar" value="cadastrar" />
+                        </a>
                     </li>
                 </ol>
-                </fieldset>     
-            </form>
-        
-        
-            <form class="login" id="form_cadastro" method="post">
-            <fieldset id="formulario_2">
-                <ol>
-                    <li>
-                        <label for="nome">e-mail</label>
-                        <input id="email_c" type="email" value=""/>
-                    </li>
-                    <li>
-                        <label for="login">login&nbsp;&nbsp;</label>
-                        <input id="login_c" type="name" value=""/>
-                    </li>
-                    <li>
-                        <label for="senha">senha</label>
-                        <input id="senha_c" type="password" value="" />
-                    </li>
-                    <li>
-                        <input type="button" onclick="voltar1()" class="botao" id="voltar" value="voltar" />
-                        <input type="button" onclick="draw_cadastro()" class="botao" id="continuar" value="continuar" />
-                    </li>
-                </ol>
-                </fieldset>     
-            </form>
-          <div id="logo">ALVO</div>
-        </div>
-      
-  </body>
-</html>
+            </fieldset>     
+        </form>
+        <div id="logo">ALVO</div>
+        <div><?php echo $this->resultlogin; ?></div>
+    </div>
+</body>
