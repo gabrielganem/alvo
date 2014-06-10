@@ -69,5 +69,4 @@ class Application_Model_Usuario {
         $this->_redirect('/user');
     }
 
-    
 }

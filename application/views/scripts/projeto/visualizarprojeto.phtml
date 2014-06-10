@@ -1,105 +1,39 @@
-<style>
-.participantes * {
-	color: black !important;
-}
-</style>
+<style>.participantes *{color:black !important;}</style>
 <div class="col-md-12">
-	<h1><?php echo $this->titulo1; ?></h1>
+    <h1><?php echo $this->titulo1; ?></h1>
 </div>
 <div class="row">
-	<div class="col-md-9">
-		<h2>Descrição do projeto</h2>
-		<p class="lead"><?php echo $this->descricao ?></p>
+    <div class="col-md-9">
+        <h2>Descrição do projeto</h2>
+        <p class="lead"><?php echo $this->descricao ?></p>
 
-		<a class="btn btn-inverse"
-			href="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'index')); ?>">Voltar</a>
-		<h6><?php echo $this->warning; ?></h6>
-
-		<div class="col-md-12">
-		<h1>Mensagens</h1>
-			<div>
-				<ul>
-				<?php
-				if ($this->listMessage != null) {
-					foreach ( $this->listMessage as $tupla ) {
-					?>
-                            <li>
-                               <p style="color: black !important;"> <?php echo "{$tupla['mensagem']}";?></p>
-                            </li><?php
-					}
-				}
-				?>
-				</ul>
-			</div>
-		<h2>Enviar Mensagem</h2>
-	
-        <form action="<?php echo $this->url(array('controller' => 'Mensagem', 'action' => 'form')); ?>" method="post">
-           <div class="form-group">
-           
-            <select class="form-control" name="destinatario">
-            	<?php
-					if ($this->userMessage != null) {
-						foreach ( $this->userMessage as $par ) {
-							foreach ( $par as $par2 ) {
-								// gerar tabela
-								
-								?>
-								
-								<option value="<?php echo $par2['id_usuario'];?>">
-			                            <?php echo $par2['login'];?>
-			                        </option>
-			                        <?php
-							}
-						}
-					}
-					?>
-            </select>
-           </div>
-            <input type="hidden" name="fk_id_projeto" value="<?php echo $this->idproj; ?>"/>
-            <div class="form-group">
-            <textarea name="mensagem" placeholder="mensagem" style="width: 100%;"></textarea>
-             </div>
-            <input type="submit" value="Gravar">
-        </form>
-		</div>
-	</div>
-	<div class="col-md-3">
-		<p>Participantes</p>
-		<ul class="participantes"><?php
-		if ($this->participantes != null) {
-			foreach ( $this->participantes as $par ) {
-				foreach ( $par as $par2 ) {
-					// gerar tabela
-					?><li>
-                            <?php echo $par2['login']?>
+        <a class="btn btn-inverse" href="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'index')); ?>">Voltar</a>
+        <h6><?php echo $this->warning; ?></h6>
+    </div>
+    <div class="col-md-3">
+        <p>Participantes</p>
+        <ul class="participantes"><?php
+            if ($this->participantes != null) {
+                foreach ($this->participantes as $par) {
+                    foreach ($par as $par2) {
+                        //gerar tabela
+                        ?><li>
+                            <?php echo $par2['login'] ?>
                         </li>
                         <?php
-				}
-			}
-		}
-		?></ul>
-		<form
-			action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'adicionarusuarioprojeto')); ?>"
-			method="post">
-			<input type="hidden" name="id_projeto"
-				value="<?php echo $this->idproj; ?>" /> <input type="hidden"
-				name="nome_projeto" value="<?php echo $this->nmproj; ?>" /> <input
-				class="btn btn-success" type="submit" value="Adicionar usuario">
-		</form>
-		<form
-			action="<?php echo $this->url(array('controller' => 'submitDocs', 'action' => 'index')); ?>"
-			method="post">
-			<input type="hidden" name="fk_id_projeto"
-				value="<?php echo $this->idproj; ?>" /> <input
-				class="btn btn-success" type="submit" value="Documentos">
-		</form>
+                    }
+                }
+            }
+            ?></ul>
+        <form action="<?php echo $this->url(array('controller' => 'Projeto', 'action' => 'adicionarusuarioprojeto')); ?>" method="post">
+            <input type="hidden" name="id_projeto" value="<?php echo $this->idproj; ?>"/>
+            <input type="hidden" name="nome_projeto" value="<?php echo $this->nmproj; ?>"/>
 
-		<form
-			action="<?php echo $this->url(array('controller' => 'mensagem', 'action' => 'form')); ?>"
-			method="post">
-			<input type="hidden" name="fk_id_projeto"
-				value="<?php echo $this->idproj; ?>" /> 
-				<input class="btn btn-success" type="submit" value="escrever mensagem">
-		</form>
-	</div>
+            <input class="btn btn-success" type="submit" value="Adicionar usuario">
+        </form>
+        <form action="<?php echo $this->url(array('controller' => 'submitDocs', 'action' => 'index')); ?>" method="post">
+            <input type="hidden" name="fk_id_projeto" value="<?php echo $this->idproj; ?>"/>
+            <input class="btn btn-success" type="submit" value="Documentos">
+        </form>
+    </div>
 </div>
