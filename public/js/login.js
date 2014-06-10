@@ -12,6 +12,10 @@ function senha_incorreta() {
   alert("Senha inválida. Tente novamente");
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 function contorno() {
   var radius = 200;
   context.beginPath();

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body>
 
     <div id="canvas-wrap">
@@ -35,3 +36,50 @@
         <div><?php echo $this->resultlogin; ?></div>
     </div>
 </body>
+=======
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo_1.css">
+        <title>Alvo</title>
+    </head>
+    <body>
+
+        <div id="canvas-wrap">
+
+            <canvas id="circle" width="600" height="600"></canvas>
+
+
+            <input type="button" onclick="init()" value="" id="hoverme" />
+
+            <form class="login" id="form_login" method="post" action="<?php $this->url(array('controller' => 'Index', 'action' => 'index')); ?>">
+                <fieldset id="formulario">
+                    <ol>
+                        <!--<li>
+                            <label for="nome">nome<em></em></label>
+                            <input id="nome" type="name" value=""/>
+                        </li>-->
+                        <li>
+                            <label for="login">login&nbsp;&nbsp;</label>
+                            <input id="login" type="text" name="nome_usuario" value=""/>
+                        </li>
+                        <li>
+                            <label for="senha">senha</label>
+                            <input id="senha" name="senha" type="password" value="" />
+                        </li>
+                        <li>
+                            <input type="submit" onclick="progresso_login()" class="botao" id="entrar" value="entrar" />
+                            <form method="post" action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'cadastro')); ?>">
+                                <input type="submit" onclick="draw_login()" class="botao" id="cadastrar" value="cadastrar" />
+                            </form>
+                        </li>
+                    </ol>
+                </fieldset>     
+            </form>
+            <div id="logo">ALVO</div>
+            <div><?php echo $this->resultlogin; ?></div>
+        </div>
+    </body>
+</html>
+>>>>>>> origin/master
