@@ -13,7 +13,14 @@ function senha_incorreta() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+function sub(){
+  document.forms['form_login'].action="<?php echo $this->url(array('controller' => 'Index', 'action' => 'index')); ?>";
+  document.forms['form_login'].submit();
+}
+>>>>>>> parent of 28acd43... Arrumando o login
 
 >>>>>>> origin/master
 function contorno() {
